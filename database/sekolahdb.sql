@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 18, 2022 at 11:48 AM
+-- Generation Time: Jun 20, 2022 at 11:58 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -30,10 +30,38 @@ SET time_zone = "+00:00";
 CREATE TABLE `berita` (
   `id` int(11) NOT NULL,
   `judul` varchar(30) NOT NULL,
-  `deskripsi` text NOT NULL,
   `tgl_publis` date NOT NULL,
-  `penulis` varchar(40) NOT NULL
+  `deskripsi` text NOT NULL,
+  `id_kategori` int(11) NOT NULL,
+  `img` varchar(1000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `berita`
+--
+
+INSERT INTO `berita` (`id`, `judul`, `tgl_publis`, `deskripsi`, `id_kategori`, `img`) VALUES
+(45455, 'dfgdg', '2022-06-16', 'fdgdg', 2, 'danio.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kategori`
+--
+
+CREATE TABLE `kategori` (
+  `id_kategori` int(11) NOT NULL,
+  `nama_kategori` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kategori`
+--
+
+INSERT INTO `kategori` (`id_kategori`, `nama_kategori`) VALUES
+(1, 'berita utama'),
+(2, 'berita kemenag'),
+(3, 'berita luar ');
 
 -- --------------------------------------------------------
 
@@ -71,10 +99,26 @@ ALTER TABLE `berita`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `kategori`
+--
+ALTER TABLE `kategori`
+  ADD PRIMARY KEY (`id_kategori`);
+
+--
 -- Indexes for table `siswa`
 --
 ALTER TABLE `siswa`
   ADD PRIMARY KEY (`nik`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `kategori`
+--
+ALTER TABLE `kategori`
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
