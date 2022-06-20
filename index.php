@@ -1,7 +1,20 @@
 <?php
+   session_start();
+   if (!isset($_SESSION['username'])){
+       header("Location: login/");
+   }
+?>
+<?php
 if (isset($_GET['page'])) {
   $acp = $_GET['page'];
 }
+?>
+<?php
+include "koneksi/koneksi.php";
+ $foto = $_SESSION['nik'];
+$query = mysqli_query($koneksi,"SELECT * FROM siswa WHERE nik='$foto'");
+
+$foto = mysqli_fetch_array($query);
 ?>
 <!doctype html>
 <html lang="en">
@@ -19,7 +32,7 @@ if (isset($_GET['page'])) {
 </head>
 
 <body>
-<div id="preloader"></div>
+
   <div class="wrapper d-flex align-items-stretch">
     <nav id="sidebar">
       <div class="custom-menu">
@@ -28,10 +41,18 @@ if (isset($_GET['page'])) {
           <span class="sr-only">Toggle Menu</span>
         </button>
       </div>
-      <h1><a href="index.php" class="logo">Berita Terkini </a></h1>
+      <h1><a href="index.php" class="logo">Kemenag Kab.</a></h1>
       <ul class="list-unstyled components mb-5">
+        <li>
+          <div class="propil">
+          <img src="img/<?= $foto['poto']?>" id="img" >
+        <img src="img/logop.png" alt="" id="i">
 
+        </div>
+        <br>
+        </li>
         <li class="<?php if($acp == 'berita'){echo"active";}if($acp == 'edit' ){echo"active";} ?>">
+        <div class="garis"></div>
           <a href="index.php?page=berita"><span class="fa fa-home mr-3"></span>Berita</a>
         </li>
         <li class="<?php if($acp == 'siswa' ){echo"active";}if($acp == 'detail' ){echo"active";}if($acp == 'editsiswa' ){echo"active";} ?>">
@@ -43,7 +64,6 @@ if (isset($_GET['page'])) {
         </li>
         <li class="<?php if($acp == 'upload-siswa'){echo"active";} ?>">
           <a href="index.php?page=upload-siswa"><span class="fa fa-paper-plane mr-3"></span>upload data siswa</a>
-        <li>
         </li>
       </ul>
 
@@ -56,7 +76,7 @@ if (isset($_GET['page'])) {
       } else if ($id == 'upload') {
         $name_page = "upload berita";
       } else if ($id == 'siswa') {
-        $name_page = "tampilan data siswa";
+        $name_page = "Data Petugas Kemenag";
       } else if ($id == 'upload-siswa') {
         $name_page = "upload data siswa";
       }else if ($id == 'detail') {
@@ -72,7 +92,8 @@ if (isset($_GET['page'])) {
     ?>
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5 pt-5">
-      <h2 class="mb-4"><?= $name_page ?></h2>
+      <h2><?= $name_page ?></h2>
+      <div id="preloader"></div>
       <p>
         <?php
         if (isset($_GET['page'])) {
@@ -99,7 +120,6 @@ if (isset($_GET['page'])) {
       </p>
     </div>
   </div>
-
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -110,10 +130,21 @@ if (isset($_GET['page'])) {
     </script>
 </html>
 <style>
+   /* @font-face {
+  font-family:rian;
+  src: url('fonts/Lobster-Regular.ttf');
+}
+h2{
+  font-family:rian;
+} */
   body{
     background-color:#f8fafb;
   }
   input,textarea,select{
     background-color:#f8fafb;
+  }
+  #i{
+margin-top:-119%;
+margin-left:370%;
   }
 </style>

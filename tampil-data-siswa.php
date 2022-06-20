@@ -24,27 +24,18 @@
     ?>
            <div class="kosong">
             <div class="out-box">
+                <br>
                 <div class="box">
-                    <img src="img/<?= $data[4] ?>" alt="" style="width:100%;height:100%;">
+                    <img src="img/<?= $data[4] ?>" alt="" style="width:100%;height:100%;border-radius:4%;">
+                    <div class="info">
+                    <b><?= $data[1]?></b>
+                    </div>
                 </div>
-                <center>
-                    <b><?= $data[1] ?></b>
-                    <table>
-                        <tr>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="index.php?page=detail&id=<?=$data[0]?>"><button style="background-color:green;">detail</button></a>
-                                <a href="index.php?page=editsiswa&id=<?=$data[0]?>"><button style="background-color:yellow;">edit</button></a>
-                                <a href="hapus.php?ids=<?= $data[0] ?>"><button style="background-color:red;">hapus</button></a>
-                            </td>
-                        </tr>
-                    </table>
-                </center>
+                
             </div>
         </div>
         <?php
+
         $no++;
     }
         ?>
@@ -52,54 +43,49 @@
 </body>
 
 </html>
+
 <style>
     button {
         border-radius: 10px;
     }
-    button:hover{
-        zoom:102%;
-        box-shadow:5px 5px 5px 5px ;
-    }
     .kosong{
 
         width: 180px;
-        height: 295PX;
+        height:300PX;
     }
 
     .out-box {
-        width: 180px;
-        height: 275PX;
-        border: 2px solid black;
+        width: 230px;
+        height:310px;
+        background-image:url('img/p1.png');
+        background-size:cover;
         border-radius: 10px;
         text-align: center;
-
-    }
-    .out-box:hover{
-        background-color:#28a745    ;
-        zoom:105%;
-        color:white;
-        /* box-shadow: 10px 10px 10px 10px; */
-
 
     }
 
     .box {
         text-align: center;
-        margin-left: -1%;
-        width: 101%;
-        height: 190PX;
-        border: 4px solid black;
+        margin-left:20%;
+        margin-top:13%;
+        width: 60%;
+        height: 200PX;
         border-radius: 10px;
+        display:block;
+        position: relative;
 
     }
+    .out-box :hover .info{
+        display:block;
+    }
+    
     .body{
-        /* background-color:yellow; */
         display:grid;
         grid-template-columns:auto auto auto auto;
         overflow:auto;
     }
- 
-    b:hover{
-    zoom:110%;
+    b{
+        margin-top:-15%;
+        display:none;
     }
 </style>

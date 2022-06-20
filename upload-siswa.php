@@ -2,19 +2,19 @@
     <table>
         <tr>
             <td>Masukan nik</td>
-            <td><input type="text" name="a"></td>
+            <td><input type="text" name="a" id="input"></td>
         </tr>
         <tr>
             <td>Masukan nama</td>
-            <td><input type="text" name="b"></td>
-        </tr>
+            <td><input type="text" name="b" id="input"></td>
+        </tr>   
         <tr>
             <td>jenis kelamin</td>
             <td>
-                <input type="radio" name="c" value="l">Laki-Laki
-                <input type="radio" name="c" value="p">Perempuan
+            <input type="radio" name="c" value="l" id="radio" id="radio">laki laki 
+            <input type="radio" name="c" value="p" id="radio" id="radio">perempuan 
             </td>
-        </tr>
+        </tr>   
         <tr>
             <td>kelas</td>
             <td>
@@ -27,11 +27,11 @@
         </tr>
         <tr>
             <td>foto</td>
-            <td><input type="file" name="e"></td>
+            <td><input type="file" name="e" id="foto"></td>
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" name="simpan" class="btn btn-success" value="simpan"></td>
+            <td><input type="submit" name="simpan" class="btn btn-success" value="simpan" id="submit"></td>
         </tr>
     </table>
 </form>
@@ -68,3 +68,28 @@ if (isset($_POST['simpan'])) {
     }
 }
 ?>
+
+<style>
+     #input{
+    width:100% ;
+    border-radius:7px;
+    height:50px;
+    border:1px solid grey;
+
+  }
+  #submit{
+    width:100% ;
+    border-radius:7px;
+    height:50px;
+
+  }
+#radio{
+    width:20px;
+}
+  #foto{
+    border:none;
+  }
+  select{
+    width:40%;
+  }
+</style>

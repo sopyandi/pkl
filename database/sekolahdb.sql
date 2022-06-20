@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2022 at 06:15 AM
+-- Generation Time: Jun 18, 2022 at 11:48 AM
 -- Server version: 10.4.20-MariaDB
--- PHP Version: 7.4.22
+-- PHP Version: 8.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,14 +35,6 @@ CREATE TABLE `berita` (
   `penulis` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `berita`
---
-
-INSERT INTO `berita` (`id`, `judul`, `deskripsi`, `tgl_publis`, `penulis`) VALUES
-(1, 'sayang', 'selalu aku yang salah sayng', '2022-05-18', 'rian sopyansi'),
-(2, 'selalu salah', 'semangat ku hanya dirimu ', '2022-05-18', 'rian sopyandi');
-
 -- --------------------------------------------------------
 
 --
@@ -62,10 +54,11 @@ CREATE TABLE `siswa` (
 --
 
 INSERT INTO `siswa` (`nik`, `nama`, `jk`, `kelas`, `poto`) VALUES
-(2312, 'rian ', 'p', 'xi', 'coklat.jpg'),
-(4543, 'sopyandi', '', 'x', ''),
-(6786, 'rani', 'l', 'xii', 'The-Roastery-by-Nozy-Coffee.jpg'),
-(789790, 'raiska', 'p', 'x', 'Nana.jpg');
+(12121, 'dina larima', 'p', 'xii', 'dina.jpg'),
+(12122, 'hardi ferdian', 'l', 'xii', 'hardi.jpg'),
+(12123, 'pani rahma', 'p', 'xii', 'pani.jpg'),
+(12124, 'randi', 'l', 'xii', 'randi.jpg'),
+(12125, 'rina arganahraini', 'p', 'xii', 'rina.jpg');
 
 --
 -- Indexes for dumped tables

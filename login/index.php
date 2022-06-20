@@ -1,3 +1,8 @@
+<?php
+ session_start();
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -17,7 +22,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="icon" href="images/ii.png" type="image/gif" style="width:200px;">
-    <title>login</title>
+    <title>login Kemenag Tasikmalaya</title>
   </head>
   <body>
     <div id="preloader"></div>
@@ -104,9 +109,9 @@ $username = $_POST['user'];
 $password = $_POST['pas'];
 
 $query = mysqli_query($koneksi,"SELECT * FROM siswa WHERE nama='$username' AND nik='$password'");
-
 $cek = mysqli_num_rows($query);
 if($cek > 0){
+$_SESSION['nik'] = $password;
 header('location:../?page=berita');
 }else{
 echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
