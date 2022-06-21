@@ -8,59 +8,97 @@
 </head>
 <body>
     <table>
+    <?php
+    // menampilkan data berita yang mempunyai kategori berita utama
+        include "koneksi/koneksi.php";
+        $berita_utama = '1';
+        $query = mysqli_query($koneksi, "SELECT * FROM berita WHERE id_kategori = '$berita_utama'");
+        $data = mysqli_fetch_array($query);
+        if ($data[4] == '1') {
+        $foto = $data[5];
+        $judul = $data[1];
+        $waktu_publish = $data[2];
+        $deskripsi = $data[3];
+      }
+    ?>
         <tr>
             <td width="37%">
             <div class="b1">
-            <img src="foto-berita/b2.jpg" alt="">
+            <img src="foto-berita/<?=$foto?>" alt="">
             </div>
             </td>
             <td>
             <div class="info-b1">
-             <b>Emril Ternyata Sosok Dermawan Dan Ramah</b>
-               <h5>sabtu,20 oktober 2022 </h5>
-             <p>kebanyakan orang selalu bertanya tanya untuk kepribadian emil</p>
+             <b><?=$judul?></b>
+               <h5><?=$waktu_publish?></h5>
+             <p><?=$deskripsi?></p>
              </div>
             </td>
         </tr>
     </table>
     <hr>
-    <center>
-    <table>
+    <!-- berita kemenag -->
+    <table id="berita-kemenag">
+        <h6>berita kemenag</h6>
+        <?php
+        include "koneksi/koneksi.php";
+        $berita_kemenag = '2';
+        $query = mysqli_query($koneksi,"SELECT * FROM berita WHERE id_kategori = '$berita_kemenag'");
+        while($data = mysqli_fetch_array($query)){
+        ?>
         <tr>
             <td>
             <div class="b-content-1">
-           <img src="foto-berita/b3.jpg" alt="">
-           <br><br>
-           <img src="foto-berita/b4.jpg" alt="">
+           <img src="foto-berita/<?= $data[5]?>" alt="">
            </div>
             </td>
             <td>
-            <b>Fanesa ANgkat Bicara </b>
-           <h5 style="font-size:100%;">jumat,19 oktober 2022</h5>
-           <p>Selama Ini fanesa selalu ber kaca kaca</p>
-           <br><br>
-           <b>Fanesa ANgkat Bicara </b>
-           <h5 style="font-size:100%;">jumat,19 oktober 2022</h5>
-           <p>Selama Ini fanesa selalu ber kaca kaca</p>
-            </td>
-            <td>
-            <div class="b-content-2">
-           <img src="foto-berita/b1.jpg" alt="">
-           <br><br>
-           <img src="foto-berita/b5.jpg" alt="">
-           </div>
-            </td>
-            <td>
-            <b>Fanesa ANgkat Bicara </b>
-           <h5 style="font-size:100%;">jumat,19 oktober 2022</h5>
-           <p>Selama Ini fanesa selalu ber kaca kaca</p>
-           <br><br>
-           <b>Fanesa ANgkat Bicara </b>
-           <h5 style="font-size:100%;">jumat,19 oktober 2022</h5>
-           <p>Selama Ini fanesa selalu ber kaca kaca</p>
+           <b><?=$data[1]?></b>
+           <h5 style="font-size:100%;"><?=$data[2]?></h5>
+           <p><?=$data[3]?></p>
             </td>
         </tr>
+        <tr><td><br></td></tr>
+        <?php
+        }
+        ?>
     </table>
-    </center>
+    <!-- berita luar -->
+    <table id="berita-luar">
+        <?php
+        include "koneksi/koneksi.php";
+        $berita_luar = '3';
+        $query = mysqli_query($koneksi,"SELECT * FROM berita WHERE id_kategori = '$berita_luar'");
+        while($data = mysqli_fetch_array($query)){
+        ?>
+        <tr>
+            <td>
+            <div class="b-content-1">
+           <img src="foto-berita/<?= $data[5]?>" alt="">
+           </div>
+            </td>
+            <td>
+           <b><?=$data[1]?></b>
+           <h5 style="font-size:100%;"><?=$data[2]?></h5>
+           <p><?=$data[3]?></p>
+            </td>
+        </tr>
+        <tr><td><br></td></tr>
+        <?php
+        }
+        ?>
+    </table>
 </body>
 </html>
+<style>
+#berita-kemenag{
+    width:38%;
+    position: absolute;
+}
+#berita-luar{
+    width:38%;  
+    position: absolute;
+    margin-left:38%;
+}
+
+</style>

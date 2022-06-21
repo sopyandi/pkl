@@ -1,6 +1,6 @@
 <?php
    session_start();
-   if (!isset($_SESSION['username'])){
+   if (!isset($_SESSION['nik'])){
        header("Location: login/");
    }
 ?>
@@ -13,7 +13,6 @@ if (isset($_GET['page'])) {
 include "koneksi/koneksi.php";
  $foto = $_SESSION['nik'];
 $query = mysqli_query($koneksi,"SELECT * FROM siswa WHERE nik='$foto'");
-
 $foto = mysqli_fetch_array($query);
 ?>
 <!doctype html>

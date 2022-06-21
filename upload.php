@@ -10,7 +10,7 @@
         </tr>
         <tr>
           <td>Tanggal Publish</td>
-          <td><input type="date" name="c"></td>
+          <td><input type="text" name="c"></td>
         </tr>
         <tr>
           <td>Deskrpisi Berita</td>
@@ -54,11 +54,16 @@ if (isset($_POST['simpan'])) {
     //ambil nama gambar
     $f = $_FILES['f']['name'];
     //pindahkan foto ke dalam folder
-    $direktori = 'img/' . $f;
+    $direktori = 'foto-berita/' . $f;
     //ambil ukuran gambar
     $size = $_FILES['f']['size'];
     //proses
     include "koneksi/koneksi.php";
+     // penghapusan data berita utama
+     if($e == '1'){
+        $kategori = '1';
+        $hapus_berita_utama = mysqli_query($koneksi,"DELETE FROM berita WHERE id_kategori = '$kategori'");
+    }
     //jika form gambar di isi ini yang terjadi
     //system akan memfilter gambar 
     if (is_uploaded_file($_FILES['f']['tmp_name'])) {
@@ -74,7 +79,7 @@ if (isset($_POST['simpan'])) {
         $simpan = mysqli_query($koneksi, "INSERT INTO berita VALUE('$a','$b','$c','$d','$e','')");
     }
     if (mysqli_affected_rows($koneksi) > 0) {
-        header('location:index.php?page=siswa');
+        header('location:index.php?page=berita');
     }
 }
 ?>
