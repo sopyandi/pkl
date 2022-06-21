@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2022 at 11:58 AM
+-- Generation Time: Jun 21, 2022 at 07:56 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `berita` (
   `id` int(11) NOT NULL,
-  `judul` varchar(30) NOT NULL,
-  `tgl_publis` date NOT NULL,
+  `judul` text NOT NULL,
+  `tgl_publis` varchar(20) NOT NULL,
   `deskripsi` text NOT NULL,
   `id_kategori` int(11) NOT NULL,
   `img` varchar(1000) DEFAULT NULL
@@ -41,7 +41,11 @@ CREATE TABLE `berita` (
 --
 
 INSERT INTO `berita` (`id`, `judul`, `tgl_publis`, `deskripsi`, `id_kategori`, `img`) VALUES
-(45455, 'dfgdg', '2022-06-16', 'fdgdg', 2, 'danio.jpg');
+(1, 'Ternyata Kehadiran Suti Sutarmi Menjadi Sorotan', 'senin, 20 juli 2022', 'selamanya sayang selama nya', 1, 'b1.jpg'),
+(2, 'Hanya rindu padamu sayang tak lebih hanya rindu padamu', 'senin, 20 juli 2022', 'ternyata hari di bunuh koirban', 2, 'b7.jpg'),
+(3, 'Sayang Abi RIndu Pisan Sayang Ayang Nuju naon ', 'senin, 20 juli 2022', 'wsedsd', 2, 'b2.jpg'),
+(4, 'selama nyawa ini bergetar aku sayang kamu ', 'senin, 20 juli 2022', 'selalu merindu ', 3, 'b5.jpg'),
+(5, 'Hanya rindu padamu sayang tak lebih hanya rindu padamu', 'senin, 20 juli 2022', 'selalu belajar', 3, 'b3.jpg');
 
 -- --------------------------------------------------------
 
@@ -86,7 +90,8 @@ INSERT INTO `siswa` (`nik`, `nama`, `jk`, `kelas`, `poto`) VALUES
 (12122, 'hardi ferdian', 'l', 'xii', 'hardi.jpg'),
 (12123, 'pani rahma', 'p', 'xii', 'pani.jpg'),
 (12124, 'randi', 'l', 'xii', 'randi.jpg'),
-(12125, 'rina arganahraini', 'p', 'xii', 'rina.jpg');
+(12125, 'rina arganahraini', 'p', 'xii', 'rina.jpg'),
+(12126, 'rian sopyandi', 'l', 'xii', 'minions.jpg');
 
 --
 -- Indexes for dumped tables
