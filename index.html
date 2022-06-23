@@ -27,24 +27,24 @@
       <ul class="list-unstyled components mb-5">
         <li>
           <div class="propil">
-          <img src="img/<?= $foto['poto']?>" id="img" >
+          <img src="img/candri.png" id="img" >
         <img src="img/logop.png" alt="" id="i">
 
         </div>
         <br>
         </li>
-        <li class="<?php if($acp == 'berita'){echo"active";}if($acp == 'edit' ){echo"active";} ?>">
+        <li class="active">
         <div class="garis"></div>
           <a href="index.php?page=berita"><span class="fa fa-home mr-3"></span>Berita</a>
         </li>
-        <li class="<?php if($acp == 'siswa' ){echo"active";}if($acp == 'detail' ){echo"active";}if($acp == 'editsiswa' ){echo"active";} ?>">
+        <li>
           <a href="index.php?page=siswa"><span class="fa fa-user mr-3"></span>Siswa</a>
         </li>
 
-        <li class="<?php if($acp == 'upload'){echo"active";} ?>">
+        <li>
           <a href="index.php?page=upload"><span class="fa fa-paper-plane mr-3"></span>upload berita</a>
         </li>
-        <li class="<?php if($acp == 'upload-siswa'){echo"active";} ?>">
+        <li>
           <a href="index.php?page=upload-siswa"><span class="fa fa-paper-plane mr-3"></span>upload data siswa</a>
         </li>
       </ul>
