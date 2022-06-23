@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/tampilan-data-petugas.css">
 </head>
 
 <body>
@@ -43,49 +44,3 @@
 </body>
 
 </html>
-
-<style>
-    button {
-        border-radius: 10px;
-    }
-    .kosong{
-
-        width: 180px;
-        height:300PX;
-    }
-
-    .out-box {
-        width: 230px;
-        height:310px;
-        background-image:url('img/p1.png');
-        background-size:cover;
-        border-radius: 10px;
-        text-align: center;
-
-    }
-
-    .box {
-        text-align: center;
-        margin-left:20%;
-        margin-top:13%;
-        width: 60%;
-        height: 200PX;
-        border-radius: 10px;
-        display:block;
-        position: relative;
-
-    }
-    .out-box :hover .info{
-        display:block;
-    }
-    
-    .body{
-        display:grid;
-        grid-template-columns:auto auto auto auto;
-        overflow:auto;
-    }
-    b{
-        margin-top:-15%;
-        display:none;
-    }
-</style>
