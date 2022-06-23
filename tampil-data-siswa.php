@@ -23,17 +23,17 @@
     <?php
     while ($data = mysqli_fetch_array($query)) {
     ?>
+          <div class="info">
+                    <b><?= $data[1]?></b>
            <div class="kosong">
             <div class="out-box">
                 <br>
                 <div class="box">
                     <img src="img/<?= $data[4] ?>" alt="" style="width:100%;height:100%;border-radius:4%;">
-                    <div class="info">
-                    <b><?= $data[1]?></b>
-                    </div>
+                    <img src="img/candri.png" alt="" id="hover">
                 </div>
-                
             </div>
+        </div>
         </div>
         <?php
 

@@ -19,16 +19,24 @@ button {
 
 .box {
     text-align: center;
-    margin-left:20%;
+    margin-left:19.5%;
     margin-top:13%;
-    width: 60%;
-    height: 200PX;
+    width: 62%;
+    height:66.3%;
     border-radius: 10px;
     display:block;
     position: relative;
+    
 
 }
-.out-box :hover .info{
+/* .info{
+    width:100%;
+    height:100%;
+    background-color:yellow;
+
+} */
+.box:hover ~ #hover img{
+    background-color:rgba(0, 0, 0, 0.159);
     display:block;
 }
 
@@ -41,7 +49,27 @@ b{
     margin-top:-15%;
     display:none;
 }
-.out-box ~ .box :hover{
+.box:hover{
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 
+
+}
+#hover{
+    width:100%;
+    height:100%;
+    margin-top:-100%;
     display:none;
+}
+
+.body:hover > *{
+    opacity:0.3;
+
+}
+.body:hover > *:hover{
+    opacity:1;
+}
+.out-box:hover{
+    transition: .7s ease;
+    width:240px;
+    height:320px;
 }
