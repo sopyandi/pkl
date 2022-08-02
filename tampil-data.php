@@ -17,8 +17,8 @@
         if ($data[4] == '1') {
         $foto = $data[5];
         $judul = $data[1];
-        $waktu_publish = $data[2];
         $deskripsi = $data[3];
+        $waktu_publish = $data[2];
       }
     ?>
         <tr>
@@ -30,8 +30,8 @@
             <td>
             <div class="info-b1">
              <b><?=$judul?></b>
-               <h5><?=$waktu_publish?></h5>
              <p><?=$deskripsi?></p>
+             <h5><?=$waktu_publish?></h5>
              </div>
             </td>
         </tr>
@@ -54,11 +54,15 @@
             </td>
             <td>
            <b><?=$data[1]?></b>
-           <h5 style="font-size:100%;"><?=$data[2]?></h5>
            <p><?=$data[3]?></p>
+           <h5 style="font-size:100%;"><?=$data[2]?></h5>
             </td>
         </tr>
-        <tr><td><br></td></tr>
+        <tr>
+            <td>
+                <br>
+            </td>
+        </tr>
         <?php
         }
         ?>
@@ -79,11 +83,15 @@
             </td>
             <td>
            <b><?=$data[1]?></b>
-           <h5 style="font-size:100%;"><?=$data[2]?></h5>
            <p><?=$data[3]?></p>
+           <h5 style="font-size:100%;"><?=$data[2]?></h5>
             </td>
         </tr>
-        <tr><td><br></td></tr>
+        <tr>
+            <td>
+                <br>
+            </td>
+        </tr>
         <?php
         }
         ?>

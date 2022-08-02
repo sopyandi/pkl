@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 21, 2022 at 07:56 AM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 8.0.8
+-- Generation Time: Aug 02, 2022 at 10:09 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,11 +41,11 @@ CREATE TABLE `berita` (
 --
 
 INSERT INTO `berita` (`id`, `judul`, `tgl_publis`, `deskripsi`, `id_kategori`, `img`) VALUES
-(1, 'Ternyata Kehadiran Suti Sutarmi Menjadi Sorotan', 'senin, 20 juli 2022', 'selamanya sayang selama nya', 1, 'b1.jpg'),
-(2, 'Hanya rindu padamu sayang tak lebih hanya rindu padamu', 'senin, 20 juli 2022', 'ternyata hari di bunuh koirban', 2, 'b7.jpg'),
-(3, 'Sayang Abi RIndu Pisan Sayang Ayang Nuju naon ', 'senin, 20 juli 2022', 'wsedsd', 2, 'b2.jpg'),
-(4, 'selama nyawa ini bergetar aku sayang kamu ', 'senin, 20 juli 2022', 'selalu merindu ', 3, 'b5.jpg'),
-(5, 'Hanya rindu padamu sayang tak lebih hanya rindu padamu', 'senin, 20 juli 2022', 'selalu belajar', 3, 'b3.jpg');
+(1, 'Ternyata Kehadiran Suti Sutarmi Menjadi Sorotan', 'senin, 20 juli 2022', 'Ternyata kebenaran terungkap, kehadiran suti sutarmi', 1, 'b1.jpg'),
+(2, 'Kemenag Tasikmalaya Ajukan Gugatan Terhadap Penyebar Hoax', 'senin, 20 juli 2022', 'Hanya beberapa kata mungkin yang terhitung ,namun sang jurnalis merasa menyesal', 2, 'b7.jpg'),
+(3, 'Berita Kanwil Wilayah Dan Kabar Penting ,Angkat Jawab Angkat Bicara', 'senin, 20 juli 2022', 'Seharus nya Hal Seperti Ini Harus Di syukuri Agar Pemerintah Bisa apresiasi', 2, 'b2.jpg'),
+(4, 'Terhadap Sesuatu Yang Tak Bisa Di Perkirakan Mungkin Akan Berdampak Tak mungkin ', 'senin, 20 juli 2022', 'Selasa ini Saya menjalani hari seperti biasa namun tak terduga', 3, 'b5.jpg'),
+(5, 'Kesejahteraan Yang Di Dapatkan Akan Berdampak Pada Sesuatu Keputusan', 'senin, 20 juli 2022', 'Tersenyum Menjalani Semua Yang Terjadi Namun Semua Berujung Menyedihkan', 3, 'b3.jpg');
 
 -- --------------------------------------------------------
 
