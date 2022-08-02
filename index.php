@@ -55,14 +55,14 @@ $foto = mysqli_fetch_array($query);
           <a href="index.php?page=berita"><span class="fa fa-home mr-3"></span>Berita</a>
         </li>
         <li class="<?php if($acp == 'siswa' ){echo"active";}if($acp == 'detail' ){echo"active";}if($acp == 'editsiswa' ){echo"active";} ?>">
-          <a href="index.php?page=siswa"><span class="fa fa-user mr-3"></span>Siswa</a>
+          <a href="index.php?page=siswa"><span class="fa fa-user mr-3"></span>Data Petugas</a>
         </li>
 
         <li class="<?php if($acp == 'upload'){echo"active";} ?>">
           <a href="index.php?page=upload"><span class="fa fa-paper-plane mr-3"></span>upload berita</a>
         </li>
         <li class="<?php if($acp == 'upload-siswa'){echo"active";} ?>">
-          <a href="index.php?page=upload-siswa"><span class="fa fa-paper-plane mr-3"></span>upload data siswa</a>
+          <a href="index.php?page=upload-siswa"><span class="fa fa-paper-plane mr-3"></span>upload Petugas</a>
         </li>
       </ul>
 
@@ -79,7 +79,7 @@ $foto = mysqli_fetch_array($query);
       } else if ($id == 'upload-siswa') {
         $name_page = "upload data siswa";
       }else if ($id == 'detail') {
-        $name_page = "detail siswa";
+        $name_page = "detail petugas";
       }else if ($id == 'edit') {
         $name_page = "edit berita";
       }else if ($id == 'editsiswa') {

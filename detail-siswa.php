@@ -10,7 +10,9 @@ if (isset($_GET['id'])) {
 
 ?>
    <center>
-    <img src="img/<?= $data[4] ?>" alt="" style="width:25%;height:45%;" id="im"><br><br>
+    <div class="out-box">
+    <img src="img/<?= $data[4] ?>" alt="" id="im"><br><br>
+    </div>
     <table>
     <tr>
             <td><b>nama :</b></td>
@@ -28,12 +30,22 @@ if (isset($_GET['id'])) {
 ?>
 <style>
     #im{
-        border:4px solid black;
+        width:190px;
+        height:265px;
         border-radius:10px;
-        box-shadow: 10px 10px 10px 10px;
+        margin-top:24%;
         
     }
     table{
         text-align:center;
     }
+    .out-box {
+    width: 300px;
+    height:400px;
+    background-image:url('img/p1.png');
+    background-size:cover;
+    border-radius: 10px;
+    text-align: center;
+
+}
 </style>
