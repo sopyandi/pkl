@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
 
 ?>
    <center>
-    <img src="img/<?= $data[4] ?>" alt="" style="width:25%;height:45%;"><br><br>
+    <img src="img/<?= $data[4] ?>" alt="" style="width:25%;height:45%;" id="im"><br><br>
     <table>
     <tr>
             <td><b>nama :</b></td>
@@ -27,7 +27,7 @@ if (isset($_GET['id'])) {
 }
 ?>
 <style>
-    img{
+    #im{
         border:4px solid black;
         border-radius:10px;
         box-shadow: 10px 10px 10px 10px;

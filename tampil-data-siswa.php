@@ -24,12 +24,12 @@
     while ($data = mysqli_fetch_array($query)) {
     ?>
           <div class="info">
-                    <b><?= $data[1]?></b>
+                    <b></b>
            <div class="kosong">
             <div class="out-box">
                 <br>
                 <div class="box">
-                    <img src="img/<?= $data[4] ?>" alt="" style="width:100%;height:100%;border-radius:4%;">
+                    <a href="index.php?page=detail&id=<?= $data[0]?>"><img src="img/<?= $data[4] ?>" alt="" style="width:100%;height:100%;border-radius:4%;"></a>
                     <img src="img/candri.png" alt="" id="hover">
                 </div>
             </div>
